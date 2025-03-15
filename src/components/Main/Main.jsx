@@ -1,8 +1,17 @@
-import react from 'react';
+import react, { useContext } from 'react';
 import './Main.css';
 import {assets} from '../../assets/assets'
+import { ssrImportKey } from 'vite/module-runner';
+import { Context } from '../../context/Context';
 
 const Main = () => {
+
+    const {onSent, recentPropmt, showResult, loading, resultData, setInput, input} = useContext(Context);
+
+    const handleClickSend = () => {
+        onSent()
+    }
+
   return (
     <div className='main'>
         <div className="nav">
@@ -30,15 +39,15 @@ const Main = () => {
                 <div className="card">
                     <p>Improve the readibility of the following code</p>
                     <img src={assets.code_icon} alt="compas icon img" />
-                </div>
+                </div>  
             </div>
             <div className="main-bottom">
                 <div className="serch-box">
-                    <input type="text" placeholder='Ask whatever you want'/>
+                    <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Ask whatever you want'/>
                     <div>
                         <img src={assets.gallery_icon} alt="gallery icon img" />
                         <img src={assets.mic_icon} alt="mic icon img" />
-                        <img src={assets.send_icon} alt="send icon img" />
+                        <img onClick={handleClickSend} src={assets.send_icon} alt="send icon img" />
                     </div>
                 </div>
                 <p className="bottom-info">
