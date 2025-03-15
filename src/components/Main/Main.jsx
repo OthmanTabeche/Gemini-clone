@@ -32,6 +32,19 @@ const Main = () => {
                     <img src={assets.code_icon} alt="compas icon img" />
                 </div>
             </div>
+            <div className="main-bottom">
+                <div className="serch-box">
+                    <input type="text" placeholder='Ask whatever you want'/>
+                    <div>
+                        <img src={assets.gallery_icon} alt="gallery icon img" />
+                        <img src={assets.mic_icon} alt="mic icon img" />
+                        <img src={assets.send_icon} alt="send icon img" />
+                    </div>
+                </div>
+                <p className="bottom-info">
+                    Gemini may display inaccurate information, including omissions, mistakes, or outdated content. Always verify critical details from reliable sources before making decisions.
+                    </p>
+            </div>
         </div>
     </div>
   )
