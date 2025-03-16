@@ -23,12 +23,20 @@ const ContextProvider = (props) => {
         setLoading(true)
         setShowResult(true)
         setRecentPropmt(input)
+        setPrevPropmt(prev=>[...prev, input])
         const result = await run(prompt)
         let resulrArray = result.split("**");
-        let newArray ;
-        for (let)
-        console.log(result);
-        setResultData(result)
+        let newResult = '';
+        for (let i = 0; i < resulrArray.length; i++) {
+            if (i === 0 || i%2 !== 1) {
+                newResult += resulrArray[i]
+            } else {
+                newResult += "<b>" + resulrArray[i] + "</b>"
+            }
+        }
+        let newResult2 = newResult.split("*").join("</br>")
+        console.log(newResult2);
+        setResultData(newResult2)
         setLoading(false)
         setInput("")
     }
