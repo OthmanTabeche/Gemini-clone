@@ -14,7 +14,16 @@ const ContextProvider = (props) => {
     const[resultData, setResultData] = useState("");
 
     const onSent = async (prompt) => {
-        await run(input)
+
+        setResultData("")
+        setLoading(true)
+        setShowResult(true)
+        setRecentPropmt(input)
+        const result = await run(input)
+        console.log(result);  // Verificar la respuesta de la API
+        setResultData(result)
+        setLoading(false)
+        setInput("")
     }
 
     const contextValue = {
