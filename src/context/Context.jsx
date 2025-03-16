@@ -19,8 +19,8 @@ const ContextProvider = (props) => {
         setLoading(true)
         setShowResult(true)
         setRecentPropmt(input)
-        const result = await run(input)
-        console.log(result);  // Verificar la respuesta de la API
+        const result = await run(prompt)
+        console.log(result);
         setResultData(result)
         setLoading(false)
         setInput("")

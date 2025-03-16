@@ -26,8 +26,9 @@ async function run(prompt) {
   });
 
   const result = await chatSession.sendMessage(prompt);
-  console.log(result.response.text());
-  return result.text;
+  const responseText = await result.response.text();  
+  //console.log(responseText);
+  return responseText;
 }
 
 export default run;
