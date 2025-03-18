@@ -1,4 +1,4 @@
-import react, { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import './SideBar.css';
 import {assets} from '../../assets/assets'
 import { Context } from '../../context/Context';
@@ -6,12 +6,12 @@ import { Context } from '../../context/Context';
 const SideBar = () => {
 
     const[extended, setExtended] = useState(false);
-    const {onSent, prevPrompts, setRecentPrompt} = useContext(Context);
+    const {onSent, prevPropmt, setRecentPropmt} = useContext(Context);
 
     const hideSideBar = () => {
         setExtended(prev => !prev);
     }
-
+    
   return (
     <div className='sidebar'>
         <div className="top">
@@ -20,15 +20,18 @@ const SideBar = () => {
                 <img src={assets.plus_icon} alt="plus icon img" />
                {extended?<p>New Chat</p>:null} 
             </div>
-            {extended ?
+            {extended 
+                ?
                     <div className="recent">
                         <p className="recent-title">Recent</p>
-                        {prevPrompts?.map((item, index) => (
-                            <div key={index} className="recent-entry">
-                                <img src={assets.message_icon} alt="message icon img" />
-                                <p>{String(item).slice(0, 18)} ...</p>
-                            </div>
-                        ))}
+                        {prevPropmt.map((item, index) => {
+                            return (
+                                <div key={index} className="recent-entry">
+                                    <img src={assets.message_icon} alt="message icon img" />
+                                    <p>{String(item).slice(0, 18)} ...</p>
+                                </div>
+                            )
+                        })}
                     </div>
                 :null
             }
