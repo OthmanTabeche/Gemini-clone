@@ -6,7 +6,7 @@ import { Context } from '../../context/Context';
 const SideBar = () => {
 
     const[extended, setExtended] = useState(false);
-    const {onSent, prevPropmt, setRecentPropmt} = useContext(Context);
+    const {onSent, prevPropmt, setRecentPropmt, newChat} = useContext(Context);
 
     const hideSideBar = () => {
         setExtended(prev => !prev);
@@ -16,7 +16,7 @@ const SideBar = () => {
     <div className='sidebar'>
         <div className="top">
             <img onClick={hideSideBar} className='menu' src={assets.menu_icon} alt="menu icon img" />
-            <div className="new-chat">
+            <div onClick={newChat} className="new-chat">
                 <img src={assets.plus_icon} alt="plus icon img" />
                {extended?<p>New Chat</p>:null} 
             </div>
