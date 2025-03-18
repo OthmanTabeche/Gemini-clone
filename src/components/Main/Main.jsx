@@ -69,7 +69,9 @@ const Main = () => {
             }
             <div className="main-bottom">
                 <div className="serch-box">
-                    <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Ask whatever you want'/>
+                    <form action={handleClickSend}>
+                        <input onChange={(e) => setInput(e.target.value)} value={input} type="text" placeholder='Ask whatever you want'/>
+                    </form>
                     <div>
                         <img src={assets.gallery_icon} alt="gallery icon img" />
                         <img src={assets.mic_icon} alt="mic icon img" />
@@ -77,7 +79,7 @@ const Main = () => {
                     </div>
                 </div>
                 <p className="bottom-info">
-                    Gemini may display inaccurate information, including omissions, mistakes, or outdated content. Always verify critical details from reliable sources before making decisions.
+                    Developed with ❤️ by <a href="https://github.com/OthmanTabeche" target='_blank'>Othman</a>.
                     </p>
             </div>
         </div>
