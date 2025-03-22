@@ -1,6 +1,8 @@
 # Gemini Clone  
 
-![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/othmantabeche/Desktop/code/gemini-clone/src/assets/Captura%20de%20pantalla%202025-03-18%20a%20las%2021.44.21.png?version%3D1742331137299)
+Link website: https://gemini-clone-two-phi.vercel.app/
+
+https://drive.google.com/file/d/1n38TJIPLbD5Y8_uRa2cu1eydQsoxqEO4/view?usp=drive_link
 
 Gemini Clone is a web application that simulates an AI assistant inspired by Google's Gemini. It provides users with an interactive interface to ask questions, generate ideas, and receive AI-powered responses in real-time.  
 
@@ -21,7 +23,7 @@ Gemini Clone is a web application that simulates an AI assistant inspired by Goo
 ## 🚀 Overview  
 Gemini Clone is designed to provide a seamless user experience for interacting with an AI assistant. The application features a modern UI, dynamic response generation, and a conversational interface. Built with **React** and **Vite** for high performance.  
 
-![alt text](https://file%2B.vscode-resource.vscode-cdn.net/Users/othmantabeche/Desktop/code/gemini-clone/src/assets/Captura%20de%20pantalla%202025-03-18%20a%20las%2021.45.25.png?version%3D1742331155406)
+https://drive.google.com/file/d/1kOCOJGCgqdb8g8r0pGrgVt-Zpi4IDsRq/view?usp=drive_link
 
 ---
 
