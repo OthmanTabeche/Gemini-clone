@@ -5,7 +5,6 @@ import { ssrImportKey } from 'vite/module-runner';
 import { Context } from '../../context/Context';
 
 const Main = () => {
-
     const {onSent, recentPropmt, showResult, loading, resultData, setInput, input} = useContext(Context);
 
     const handleClickSend = () => {
